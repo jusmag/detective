@@ -1,0 +1,4 @@
+001 - Command does not exist
+002 - Enough arguments were not provided
+003 - Admin command was used but user was not admin
+004 - Arguments were not provided
