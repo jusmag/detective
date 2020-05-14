@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 in,out
+=======
+in,in,in,in
+>>>>>>> adding opt-out feature
