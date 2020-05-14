@@ -8,7 +8,8 @@ module.exports = {
 	execute(message, args) {
 		var data = "";
 		for(var i = 0; i < args.length; i++) {
-			data += args[i];	
+			data += args[i];
+			data += " ";
 		}
 		message.channel.send(data);
 	},
