@@ -13,7 +13,15 @@ module.exports = {
 		let lastNames = (fs.readFileSync(path.resolve(__dirname, './data/lastnames.txt'), 'utf-8')).split(",");
 		let middleNames = (fs.readFileSync(path.resolve(__dirname, './data/middlenames.txt'), 'utf-8')).split(",");
 		let cont = -1;
+		let optout = (fs.readFileSync(path.resolve(__dirname, './data/optout.txt'), 'utf-8')).split(",");
 		for(let i = 0; i < firstNames.length; i++) {
+			if(optout[i] == "out") {
+				break;
+			}
+			// console.log(firstNames[i]);
+			// console.log(args[0]);
+			// console.log(lastNames[i]);
+			// console.log(args[1]);
 		  if(args[0].toLowerCase() == firstNames[i].toLowerCase()) {
 				if(args[1].toLowerCase() == lastNames[i].toLowerCase()) {
 				  data += firstNames[i];
