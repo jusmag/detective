@@ -19,9 +19,6 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-  //keeps a log of all messages sent from running of program
-  console.log(message.content);
-  console.log('- ' + message.author.username);
   //if message does not have the prefix or the bot sent the messages
   //do not respond
   if(!message.content.startsWith(prefix) || message.author.bot) return;
