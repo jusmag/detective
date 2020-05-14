@@ -8,20 +8,12 @@ module.exports = {
 	guildOnly: false,
 	adminOnly: true,
 	execute(message, args) {
-
-		let test = 1;
 		let data = "";
 		var firstNames, middleNames, lastNames;
 
-		if(test == 1) {
-			firstNames = (fs.readFileSync(path.resolve(__dirname, './testdata/firstnames.txt'), 'utf-8')).split(",");
-			middleNames = (fs.readFileSync(path.resolve(__dirname, './testdata/middlenames.txt'), 'utf-8')).split(",");
-			lastNames = (fs.readFileSync(path.resolve(__dirname, './testdata/lastnames.txt'), 'utf-8')).split(",");
-		} else {
-			firstNames = (fs.readFileSync(path.resolve(__dirname, './data/firstnames.txt'), 'utf-8')).split(",");
-			middleNames = (fs.readFileSync(path.resolve(__dirname, './data/middlenames.txt'), 'utf-8')).split(",");
-			lastNames = (fs.readFileSync(path.resolve(__dirname, './data/lastnames.txt'), 'utf-8')).split(",");
-		}
+		firstNames = (fs.readFileSync(path.resolve(__dirname, './data/firstnames.txt'), 'utf-8')).split(",");
+		middleNames = (fs.readFileSync(path.resolve(__dirname, './data/middlenames.txt'), 'utf-8')).split(",");
+		lastNames = (fs.readFileSync(path.resolve(__dirname, './data/lastnames.txt'), 'utf-8')).split(",");
 
 		let cont = -1;
 
@@ -55,25 +47,17 @@ module.exports = {
 				}
 		  }
 		}
-		console.log(cont);
+
 		var numbers, grades, schools, ages, months, years, elems;
-		if(test == 1) {
-			numbers = (fs.readFileSync(path.resolve(__dirname, './testdata/numbers.txt'), 'utf-8')).split(",");
-			grades = (fs.readFileSync(path.resolve(__dirname, './testdata/grades.txt'), 'utf-8')).split(",");
-			schools = (fs.readFileSync(path.resolve(__dirname, './testdata/schools.txt'), 'utf-8')).split(",");
-			ages = (fs.readFileSync(path.resolve(__dirname, './testdata/ages.txt'), 'utf-8')).split(",");
-			months = (fs.readFileSync(path.resolve(__dirname, './testdata/birthmonths.txt'), 'utf-8')).split(",");
-			years = (fs.readFileSync(path.resolve(__dirname, './testdata/birthyears.txt'), 'utf-8')).split(",");
-			elems = (fs.readFileSync(path.resolve(__dirname, './testdata/elems.txt'), 'utf-8')).split(",");
-		} else {
-			numbers = (fs.readFileSync(path.resolve(__dirname, './data/numbers.txt'), 'utf-8')).split(",");
-			grades = (fs.readFileSync(path.resolve(__dirname, './data/grades.txt'), 'utf-8')).split(",");
-			schools = (fs.readFileSync(path.resolve(__dirname, './data/schools.txt'), 'utf-8')).split(",");
-			ages = (fs.readFileSync(path.resolve(__dirname, './data/ages.txt'), 'utf-8')).split(",");
-			months = (fs.readFileSync(path.resolve(__dirname, './data/birthmonths.txt'), 'utf-8')).split(",");
-			years = (fs.readFileSync(path.resolve(__dirname, './data/birthyears.txt'), 'utf-8')).split(",");
-			elems = (fs.readFileSync(path.resolve(__dirname, './data/elems.txt'), 'utf-8')).split(",");
-		}
+
+		numbers = (fs.readFileSync(path.resolve(__dirname, './data/numbers.txt'), 'utf-8')).split(",");
+		grades = (fs.readFileSync(path.resolve(__dirname, './data/grades.txt'), 'utf-8')).split(",");
+		schools = (fs.readFileSync(path.resolve(__dirname, './data/schools.txt'), 'utf-8')).split(",");
+		ages = (fs.readFileSync(path.resolve(__dirname, './data/ages.txt'), 'utf-8')).split(",");
+		months = (fs.readFileSync(path.resolve(__dirname, './data/birthmonths.txt'), 'utf-8')).split(",");
+		years = (fs.readFileSync(path.resolve(__dirname, './data/birthyears.txt'), 'utf-8')).split(",");
+		elems = (fs.readFileSync(path.resolve(__dirname, './data/elems.txt'), 'utf-8')).split(",");
+
 		if(cont > -1) {
 		  data = "";
 		  data += ("```Number: " + numbers[cont]);
