@@ -15,6 +15,9 @@ module.exports = {
 			for(var j = 0; j < blacklist.length; j++) {
 				if(args[i].toLowerCase() == blacklist[j].toLowerCase()) {
 					message.channel.send("Nice try. Found a blacklisted word: " + blacklist[j]);
+					console.log(message.author.username);
+					console.log("said the following blacklisted word:")
+					console.log(blacklist[j]);
 					return;
 				}
 			}
